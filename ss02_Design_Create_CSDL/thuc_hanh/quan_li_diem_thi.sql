@@ -1,4 +1,5 @@
 CREATE DATABASE quan_ly_diem_thi;
+
 USE quan_ly_diem_thi;
 
 CREATE TABLE hoc_sinh(
