@@ -1,5 +1,9 @@
 -- Task 1 --
 
+/* Thêm mới thông tin cho tất cả các bảng có trong CSDL để có thể thoả mãn các yêu cầu bên dưới. */
+
+use case_study;
+
 insert into vi_tri
 values (1, 'Quản Lý'),
 	   (2, 'Nhân Viên');

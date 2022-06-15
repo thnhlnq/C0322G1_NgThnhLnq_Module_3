@@ -1,3 +1,5 @@
+drop database case_study;
+
 create database case_study;
 
 use case_study;
@@ -19,7 +21,7 @@ ten_bo_phan varchar(45)
 
 create table nhan_vien (
 ma_nhan_vien int auto_increment primary key,
-ho_va_ten varchar(45),
+ho_ten varchar(45),
 ngay_sinh date,
 so_cmnd varchar(45),
 luong double,
@@ -41,7 +43,7 @@ ten_loai_khach varchar(45)
 
 create table khach_hang (
 ma_khach_hang int auto_increment primary key,
-ho_va_ten varchar(45),
+ho_ten varchar(45),
 ngay_sinh date,
 gioi_tinh bit(1),
 so_cmnd varchar(45),
