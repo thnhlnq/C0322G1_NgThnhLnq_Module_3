@@ -38,7 +38,8 @@ select customer.*, count(`order`.c_id) as so_luong from customer
 left join `order` on customer.c_id = `order`.c_id
 group by c_id having so_luong = 0;
 
-select  `order`.o_id, `order`.o_date, order_detail.od_qty, product.p_price, order_detail.od_qty * product.p_price as gia_tien
+select  `order`.o_id, `order`.o_date, order_detail.od_qty, product.p_price, sum(order_detail.od_qty * product.p_price) as gia_tien
 from `order`
 join order_detail on `order`.o_id = order_detail.o_id
-join product on order_detail.p_id = product.p_id;
+join product on order_detail.p_id = product.p_id
+group by o_id;
