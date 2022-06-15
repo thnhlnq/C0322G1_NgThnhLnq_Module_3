@@ -20,7 +20,7 @@ VALUES (1, 'CF', 5, 1),
        (3, 'HDJ', 5, 1),
        (4, 'RDBMS', 10, 1);
        
-INSERT INTO Mark (sub_id, student_id, mark, exam_times)
+INSERT INTO mark (sub_id, student_id, mark, exam_times)
 VALUES (1, 1, 8, 1),
        (1, 2, 10, 2),
        (2, 1, 12, 1);

@@ -10,8 +10,9 @@ select * from `subject`
 where 3 <= credit and credit <= 5;
 
 set sql_safe_updates = 0;
-update class set class_id = 2 where student_name like 'Hung';
+update student set class_id = 2 where student_name like 'Hung';
 
-select student_name, sub_name, mark 
-from student, `subject`, mark 
-order by mark desc;
+select student.student_name , `subject`.sub_name,  mark.mark from student
+join mark on student.student_id = mark.student_id
+join `subject` on mark.sub_id = `subject`.sub_id
+order by mark desc, student_name asc;
