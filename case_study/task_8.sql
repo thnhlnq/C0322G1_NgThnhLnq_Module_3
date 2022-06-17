@@ -4,9 +4,10 @@
 
 -- Cách 1 --
 
-select khach_hang.ho_ten from khach_hang
-group by ho_ten
-having count(ho_ten) > 1;
+SELECT khach_hang.ho_ten
+FROM khach_hang
+GROUP BY ho_ten
+HAVING COUNT(ho_ten) > 1;
 
 -- Cách 2 --
 
