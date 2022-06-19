@@ -14,4 +14,4 @@ JOIN nhan_vien ON hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
 JOIN khach_hang ON hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
 JOIN dich_vu ON hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
 JOIN hop_dong_chi_tiet ON hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
-WHERE (MONTH(ngay_lam_hop_dong) BETWEEN 10 AND 12) AND YEAR(ngay_lam_hop_dong) = 2020
+WHERE (MONTH(ngay_lam_hop_dong) BETWEEN 10 AND 12) AND YEAR(ngay_lam_hop_dong) = 2020;
