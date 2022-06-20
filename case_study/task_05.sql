@@ -18,5 +18,4 @@ LEFT JOIN dich_vu ON hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
 LEFT JOIN hop_dong_chi_tiet ON hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
 LEFT JOIN dich_vu_di_kem ON hop_dong_chi_tiet.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
 GROUP BY ma_khach_hang
-ORDER BY ma_khach_hang ASC;
- 
+ORDER BY ma_khach_hang ASC; 
