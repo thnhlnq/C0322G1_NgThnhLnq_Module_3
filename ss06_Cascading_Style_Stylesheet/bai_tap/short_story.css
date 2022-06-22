@@ -1,0 +1,31 @@
+div img {
+    padding: 10px 10px 20px 20px;
+    width: 100px;
+    height: 150px;
+}
+
+a:hover {
+    color: red;
+}
+
+a {
+    color: cadetblue;
+    text-decoration: none;
+    padding: 10px 20px 10px 30px;
+}
+
+.head img {
+    width: 300px;
+    height: 100px;
+}
+
+.body {
+    display: flex;
+}
+
+p {
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    height: 150px;
+}
+
