@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout RWD</title>
+    <link rel="stylesheet" href="create_layout_RWD.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+<header class="row">
+    <div class="row_header">
+        <div class="col-6">
+            <div id="menu">
+                <ul>
+                    <li><a href="#">Logo</a>
+                        <ul>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Home</a>
+                        <ul>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a>
+                        <ul>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Project</a>
+                        <ul>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a>
+                        <ul>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                            <li><a href="#">link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6 login" style="justify-content: right">Login</div>
+    </div>
+</header>
+<section>
+    <div class="row_body">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div>
+                <h2>Welcome</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus mi ac imperdiet viverra.
+                    Sed quis velit nibh. Maecenas sagittis, enim non vehicula hendrerit, turpis elit elementum enim, sed
+                    tincidunt mi quam vel metus. Duis augue dolor, bibendum at ligula non, mattis pretium augue. Proin
+                    tincidunt laoreet risus quis consectetur. Duis nunc dui, maximus non nisi molestie, pretium interdum
+                    ante. Integer dignissim viverra elit, vitae fringilla est cursus ac. Donec iaculis maximus justo, a
+                    laoreet lacus. Proin euismod suscipit velit, eget scelerisque justo aliquet ultricies. Nullam
+                    porttitor porta sapien sed placerat. Praesent ullamcorper posuere rhoncus.</p>
+            </div>
+            <hr>
+            <div>
+                <h3>Test</h3>
+                <p>Lorem ipsum...</p>
+            </div>
+        </div>
+        <div class="col-3 ads"></div>
+    </div>
+</section>
+<footer class="col-12">Footer Text</footer>
+</body>
+</html>

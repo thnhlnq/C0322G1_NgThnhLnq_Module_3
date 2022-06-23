@@ -1,0 +1,94 @@
+img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.head {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: 100%;
+    padding: 10px;
+    background-color: black;
+    margin-top: -10px;
+    border-radius: 10px;
+}
+
+header div {
+    padding: 10px 20px 20px 20px;
+    width: 100%;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.side ul {
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    text-align: center;
+}
+
+article {
+    text-align: left;
+    width: 100%;
+    height: 100;
+    background-color: #CDCDCD;
+    border-radius: 10px;
+}
+
+article div {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+aside ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px 10px 10px;
+}
+
+a:hover {
+    color: red;
+}
+
+.body {
+    display: flex;
+    width: 100%;
+}
+
+html body {
+    width: 100%;
+    height: 100%;
+}
+
+li a:hover {
+    background-color: cadetblue;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
