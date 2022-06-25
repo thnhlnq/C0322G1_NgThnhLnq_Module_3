@@ -52,7 +52,7 @@ footer {
 }
 
 @media only screen and ( max-width: 768px ) {
-    .menu-header {
+    .row {
         background-color: cadetblue;
         margin-top: 5px;
         text-align: center;
@@ -62,11 +62,3 @@ footer {
         width: 100%;
     }
 }
-
-/*@media only screen and ( max-width: 1000px ) {*/
-/*    .menu-header {*/
-/*        background-color: blue;*/
-/*        margin-top: 7px;*/
-/*        text-align: center;*/
-/*    }*/
-/*}*/
