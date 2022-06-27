@@ -20,11 +20,10 @@ public class DiscountServlet extends HttpServlet {
         double discountAmount = listPrice * discountPercent * 0.01;
         double payPrice = listPrice - discountAmount;
 
-        PrintWriter printWriter = response.getWriter();
-        printWriter.println("<html>");
-        printWriter.println("<h1> Product Description" + productDescription + "<p>");
-        printWriter.println("<h1> Discount Amount: " + discountAmount + "</p>");
-        printWriter.println("<h1> Pay Price: " + payPrice + "</p>");
-        printWriter.println("</html>");
+        request.setAttribute("productDescription", productDescription);
+        request.setAttribute("discountAmount", discountAmount);
+        request.setAttribute("payPrice", payPrice);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
+        requestDispatcher.forward(request, response);
     }
 }

@@ -21,5 +21,8 @@
     <label><input type="text" name="discountPercent" placeholder="0"></label><br/>
     <input type="submit" value="Calculate Discount">
 </form>
+<h3> Product Description: ${productDescription}</h3>
+<h3> Discount Amount: ${discountAmount}</h3>
+<h3> Pay Price: ${payPrice}</h3>
 </body>
 </html>
