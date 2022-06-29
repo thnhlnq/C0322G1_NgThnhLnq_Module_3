@@ -16,9 +16,18 @@
         }
     </style>
 </head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <body>
 <h1>Products</h1>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <form class="d-flex">
+            <label><input class="form-control me-2" type="search" placeholder="Search" name="nameFind"></label>
+            <input class="btn btn-outline-success" type="submit" name="action" value="Search">
+        </form>
+    </div>
+</nav>
 <table class="container-fluid table table-striped table-hover">
     <tr>
         <th>Name</th>
@@ -29,18 +38,22 @@
     </tr>
     <c:forEach items="${requestScope['products']}" var="product">
         <tr>
-            <td><a class="text-decoration-none text-dark link-danger" href="/products?action=view&id=${product.getId()}">${product.getName()}</a></td>
+            <td><a class="text-decoration-none text-dark link-danger"
+                   href="/products?action=view&id=${product.getId()}">${product.getName()}</a></td>
             <td>${product.getPrice()}</td>
             <td>${product.getDescription()}</td>
             <td>${product.getProducer()}</td>
-            <td><a class="text-decoration-none text-dark link-danger" href="/products?action=edit&id=${product.getId()}">edit</a></td>
-            <td><a class="text-decoration-none text-dark link-danger" href="/products?action=delete&id=${product.getId()}">delete</a>
+            <td><a class="text-decoration-none text-dark link-danger"
+                   href="/products?action=edit&id=${product.getId()}">edit</a></td>
+            <td><a class="text-decoration-none text-dark link-danger"
+                   href="/products?action=delete&id=${product.getId()}">delete</a>
             </td>
         </tr>
     </c:forEach>
 </table>
 <p><a class="text-decoration-none text-dark link-danger" href="/products?action=create">Create New Product</a></p>
-<p><a class="text-decoration-none text-dark link-danger" href="/products?action=find">Find Product</a></p>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </html>
