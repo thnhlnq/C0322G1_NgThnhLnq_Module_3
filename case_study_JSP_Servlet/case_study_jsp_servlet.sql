@@ -40,7 +40,7 @@ foreign key (username) references `user` (username)
 create table employee (
 employee_id int primary key,
 employee_name varchar(45),
-employee_birthday date,
+employee_date_of_birth date,
 employee_id_card varchar(45),
 employee_salary double,
 employee_phone varchar(45),
@@ -64,7 +64,7 @@ customer_type_name varchar(45)
 create table customer (
 customer_id int primary key,
 customer_name varchar(45),
-customer_birthday date,
+customer_date_of_birth date,
 customer_gender bit(1),
 customer_id_card varchar(45),
 customer_phone varchar(45),
@@ -74,39 +74,39 @@ customer_type_id int,
 foreign key (customer_type_id) references customer_type (customer_type_id)
 );
 
-create table service_type (
-service_type_id int primary key,
-service_type_name varchar(45)
+create table facility_type (
+facility_type_id int primary key,
+facility_type_name varchar(45)
 );
 
 create table rent_type (
 rent_type_id int primary key,
-rent_type_name varchar(45),
-rent_type_cost double
+rent_type_name varchar(45)
 );
 
-create table service (
-service_id int primary key,
-service_name varchar(45),
-service_area int,
-service_cost double,
-service_max_people int,
+create table facility (
+facility_id int primary key,
+facility_name varchar(45),
+facility_area int,
+facility_cost double,
+facility_max_people int,
 standard_room varchar(45),
 description_other_convenience varchar(45),
 pool_area double,
 number_of_floors int,
-service_type_id int,
+facility_free text,
 rent_type_id int,
-foreign key (service_type_id) references service_type (service_type_id),
-foreign key (rent_type_id) references rent_type (rent_type_id)
+facility_type_id int,
+foreign key (rent_type_id) references rent_type (rent_type_id),
+foreign key (facility_type_id) references facility_type (facility_type_id)
 );
 
-create table attach_service (
-attach_service_id int primary key,
-attach_service_name varchar(45),
-attach_service_cost double,
-attach_service_unit int,
-attach_service_status varchar(45)
+create table attach_facility (
+attach_facility_id int primary key,
+attach_facility_name varchar(45),
+attach_facility_cost double,
+attach_facility_unit varchar(10),
+attach_facility_status varchar(45)
 );
 
 create table contract (
@@ -114,20 +114,19 @@ contract_id int primary key,
 contract_start_date datetime,
 contract_end_date datetime,
 contract_deposit double,
-contract_total_money double,
 employee_id int,
 customer_id int,
-service_id int,
+facility_id int,
 foreign key (employee_id) references employee (employee_id),
 foreign key (customer_id) references customer (customer_id),
-foreign key (service_id) references service (service_id)
+foreign key (facility_id) references facility (facility_id)
 );
 
 create table contract_detail (
 contract_detail_id int primary key,
 quantity int,
 contract_id int,
-attach_service_id int,
+attach_facility_id int,
 foreign key (contract_id) references contract (contract_id),
-foreign key (attach_service_id) references attach_service (attach_service_id)
+foreign key (attach_facility_id) references attach_facility (attach_facility_id)
 );
