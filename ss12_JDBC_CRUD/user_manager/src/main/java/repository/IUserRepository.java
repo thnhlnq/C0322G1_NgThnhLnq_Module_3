@@ -2,20 +2,21 @@ package repository;
 
 import model.User;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public interface IUserRepository {
 
-    void insertUser(User user) throws SQLException;
+    List<User> findAll();
 
-    User selectUser(int id);
+    void create(User user);
 
-    List<User> selectAllUsers();
+    User findById(int id);
 
-    boolean deleteUser(int id) throws SQLException;
+    void delete(int id);
 
-    boolean updateUser(User user) throws SQLException;
+    void edit(User user);
 
     List<User> findByCountry(String findCountry);
+
+    List<User> sortByName (String nameSort);
 }

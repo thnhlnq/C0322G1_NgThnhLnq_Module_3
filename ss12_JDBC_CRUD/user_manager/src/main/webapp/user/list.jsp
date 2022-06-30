@@ -19,9 +19,9 @@
     </h2>
     <nav class="navbar bg-light">
         <div class="container-fluid">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search By Country" aria-label="Search">
-                <input class="btn btn-outline-success" type="submit" value="Search">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search By Country" name="findCountry">
+                <input class="btn btn-outline-success" type="submit" name="action" value="Search">
             </form>
         </div>
     </nav>
@@ -36,15 +36,15 @@
             <th>Country</th>
             <th>Actions</th>
         </tr>
-        <c:forEach var="user" items="${listUser}">
+        <c:forEach items="${requestScope['listUser']}" var="user">
             <tr>
-                <td><c:out value="${user.id}"/></td>
-                <td><c:out value="${user.name}"/></td>
-                <td><c:out value="${user.email}"/></td>
-                <td><c:out value="${user.country}"/></td>
+                <td>${user.getId()}</td>
+                <td>${user.getName()}</td>
+                <td>${user.getEmail()}</td>
+                <td>${user.getCountry()}</td>
                 <td>
-                    <a href="/users?action=edit&id=${user.id}">Edit</a>
-                    <a href="/users?action=delete&id=${user.id}">Delete</a>
+                    <a href="/users?action=edit&id=${user.getId()}">Edit</a>
+                    <a href="/users?action=delete&id=${user.getId()}">Delete</a>
                 </td>
             </tr>
         </c:forEach>
