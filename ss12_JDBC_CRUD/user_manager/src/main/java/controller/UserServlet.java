@@ -40,6 +40,8 @@ public class UserServlet extends HttpServlet {
             case "Search":
                 findByCountry(request, response);
                 break;
+            case "sort":
+                sortByName(request, response);
             default:
                 listUser(request, response);
                 break;
@@ -169,6 +171,19 @@ public class UserServlet extends HttpServlet {
         String findCountry = request.getParameter("findCountry");
 
         List<User> listUser = userService.findByCountry(findCountry);
+        request.setAttribute("listUser", listUser);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void sortByName(HttpServletRequest request, HttpServletResponse response) {
+        String nameSort = request.getParameter("nameSort");
+
+        List<User> listUser = userService.sortByName(nameSort);
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
         try {
