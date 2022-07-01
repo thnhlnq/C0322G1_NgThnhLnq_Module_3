@@ -4,6 +4,7 @@ import model.User;
 import repository.IUserRepository;
 import repository.UserRepositoryImpl;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements IUserService {
@@ -42,5 +43,45 @@ public class UserServiceImpl implements IUserService {
     @Override
     public List<User> sortByName(String nameSort) {
         return userRepository.sortByName(nameSort);
+    }
+
+    @Override
+    public User getUserById(int id) {
+        return userRepository.getUserById(id);
+    }
+
+    @Override
+    public void insertUserStore(User user) throws SQLException {
+        userRepository.insertUserStore(user);
+    }
+
+    @Override
+    public void addUserTransaction(User user, int[] permision) {
+        userRepository.addUserTransaction(user, permision);
+    }
+
+    @Override
+    public void insertUpdateWithoutTransaction() {
+        userRepository.insertUpdateWithoutTransaction();
+    }
+
+    @Override
+    public void insertUpdateUseTransaction() {
+        userRepository.insertUpdateUseTransaction();
+    }
+
+    @Override
+    public List<User> displayListUser() {
+        return userRepository.displayListUser();
+    }
+
+    @Override
+    public void editUser(User user) {
+        userRepository.editUser(user);
+    }
+
+    @Override
+    public void deleteUser(int id) {
+        userRepository.deleteUser(id);
     }
 }

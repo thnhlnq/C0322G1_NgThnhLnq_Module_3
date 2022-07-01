@@ -14,9 +14,8 @@
 <body>
 <center>
     <h1>User Management</h1>
-    <h2>
-        <a href="/users?action=create">Add New User</a>
-    </h2>
+    <h3><a href="/users?action=create">Add New User</a></h3>
+    <h3><a href="/users?action=sort">Sort By Name</a></h3>
     <nav class="navbar bg-light">
         <div class="container-fluid">
             <form class="d-flex">

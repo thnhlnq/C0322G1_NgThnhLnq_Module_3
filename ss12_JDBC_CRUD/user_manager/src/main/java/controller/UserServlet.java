@@ -1,7 +1,6 @@
 package controller;
 
 import model.User;
-import repository.UserRepositoryImpl;
 import service.IUserService;
 import service.UserServiceImpl;
 
@@ -12,12 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet(name = "UserServlet", value = "/users")
 public class UserServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
     private IUserService userService = new UserServiceImpl();
 
     @Override
@@ -42,6 +39,16 @@ public class UserServlet extends HttpServlet {
                 break;
             case "sort":
                 sortByName(request, response);
+                break;
+            case "permision":
+                addUserPermision(request, response);
+                break;
+            case "test-without-tran":
+                testWithoutTran(request, response);
+                break;
+            case "test-use-tran":
+                testUseTran(request, response);
+                break;
             default:
                 listUser(request, response);
                 break;
@@ -68,7 +75,9 @@ public class UserServlet extends HttpServlet {
     }
 
     private void listUser(HttpServletRequest request, HttpServletResponse response) {
-        List<User> listUser = userService.findAll();
+//        List<User> listUser = userService.findAll();
+        List<User> listUser = userService.displayListUser();
+
         request.setAttribute("listUser", listUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
         try {
@@ -129,6 +138,8 @@ public class UserServlet extends HttpServlet {
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
         userService.create(newUser);
+//        userService.insertUserStore(newUser);
+
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
         try {
             dispatcher.forward(request, response);
@@ -143,8 +154,9 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
 
-        User book = new User(id, name, email, country);
-        userService.edit(book);
+        User user = new User(id, name, email, country);
+        userService.editUser(user);
+//        userService.edit(user);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
         try {
             dispatcher.forward(request, response);
@@ -155,7 +167,8 @@ public class UserServlet extends HttpServlet {
 
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        userService.delete(id);
+//        userService.delete(id);
+        userService.deleteUser(id);
 
         List<User> listUser = userService.findAll();
         request.setAttribute("listUser", listUser);
@@ -191,5 +204,20 @@ public class UserServlet extends HttpServlet {
         } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void addUserPermision(HttpServletRequest request, HttpServletResponse response) {
+        User user = new User("quan", "quan.nguyen@codegym.vn", "vn");
+        int[] permision = {1, 2, 4};
+        userService.addUserTransaction(user, permision);
+    }
+
+    private void testWithoutTran(HttpServletRequest request, HttpServletResponse response) {
+        userService.insertUpdateWithoutTransaction();
+    }
+
+
+    private void testUseTran(HttpServletRequest request, HttpServletResponse response) {
+        userService.insertUpdateUseTransaction();
     }
 }
