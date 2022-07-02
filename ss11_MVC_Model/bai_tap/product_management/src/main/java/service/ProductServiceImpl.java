@@ -1,14 +1,14 @@
 package service;
 
 import model.Product;
-import repository.IProductRepository;
+import repository.ProductRepository;
 import repository.ProductRepositoryImpl;
 
 import java.util.List;
 
-public class ProductServiceImpl implements IProductService {
+public class ProductServiceImpl implements ProductService {
 
-    static IProductRepository productRepository = new ProductRepositoryImpl();
+    static ProductRepository productRepository = new ProductRepositoryImpl();
 
     @Override
     public List<Product> findAll() {
@@ -31,8 +31,8 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public void edit(int id, Product product) {
-        productRepository.edit(id, product);
+    public void edit(Product product) {
+        productRepository.edit(product);
     }
 
     @Override

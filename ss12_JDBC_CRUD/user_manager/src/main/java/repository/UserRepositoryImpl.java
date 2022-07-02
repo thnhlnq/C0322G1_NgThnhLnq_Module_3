@@ -19,14 +19,14 @@ public class UserRepositoryImpl implements IUserRepository {
     private static final String SORT_BY_NAME = "select * from users order by name";
     private static final String SQL_INSERT = "INSERT INTO EMPLOYEE (NAME, SALARY, CREATED_DATE) VALUES (?,?,?)";
     private static final String SQL_UPDATE = "UPDATE EMPLOYEE SET SALARY=? WHERE NAME=?";
-    private static final String SQL_TABLE_CREATE = "CREATE TABLE EMPLOYEE"
-            + "(ID serial,"
-            + " NAME varchar(100) NOT NULL,"
-            + " SALARY numeric(15, 2) NOT NULL,"
-            + " CREATED_DATE timestamp,"
-            + " PRIMARY KEY (ID))";
-
+    private static final String SQL_TABLE_CREATE = "CREATE TABLE EMPLOYEE (ID serial PRIMARY KEY, NAME varchar(100) NOT NULL, SALARY numeric(15, 2) NOT NULL, CREATED_DATE timestamp);";
     private static final String SQL_TABLE_DROP = "DROP TABLE IF EXISTS EMPLOYEE";
+    private static final String SELECT_ALL_USER_SP = "{CALL display_list_user()}";
+    private static final String EDIT_USER_SP = "{CALL edit_user(?, ?, ?, ?)}";
+    private static final String DELETE_USER_SP = "{CALL delete_user(?)}";
+    private static final String GET_USER_BY_ID_SP = "{CALL get_user_by_id(?)}";
+    private static final String INSERT_USER_SP = "{CALL insert_user(?,?,?)}";
+    private static final String SQL_PIVOT_USER = "INSERT INTO user_permision(user_id, permision_id)  VALUES(?,?)";
 
     @Override
     public List<User> findAll() {
@@ -42,8 +42,8 @@ public class UserRepositoryImpl implements IUserRepository {
                 String country = rs.getString("country");
                 users.add(new User(id, name, email, country));
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return users;
     }
@@ -57,8 +57,8 @@ public class UserRepositoryImpl implements IUserRepository {
             ps.setString(2, user.getEmail());
             ps.setString(3, user.getCountry());
             ps.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -75,11 +75,10 @@ public class UserRepositoryImpl implements IUserRepository {
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 String country = rs.getString("country");
-                user = new User(id, name, email, country);
-                users.add(user);
+                users.add(new User(id, name, email, country));
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return user;
     }
@@ -91,8 +90,8 @@ public class UserRepositoryImpl implements IUserRepository {
             PreparedStatement ps = connection.prepareStatement(DELETE_USERS_SQL);
             ps.setInt(1, id);
             ps.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -106,8 +105,8 @@ public class UserRepositoryImpl implements IUserRepository {
             ps.setString(3, user.getCountry());
             ps.setInt(4, user.getId());
             ps.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -128,8 +127,8 @@ public class UserRepositoryImpl implements IUserRepository {
                 user = new User(id, name, email, country);
                 users.add(user);
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return users;
     }
@@ -150,8 +149,8 @@ public class UserRepositoryImpl implements IUserRepository {
                 user = new User(id, name, email, country);
                 users.add(user);
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return users;
     }
@@ -159,10 +158,9 @@ public class UserRepositoryImpl implements IUserRepository {
     @Override
     public User getUserById(int id) {
         User user = null;
-        String query = "{CALL get_user_by_id(?)}";
         try {
             Connection connection = new BaseRepository().getConnection();
-            CallableStatement callableStatement = connection.prepareCall(query);
+            CallableStatement callableStatement = connection.prepareCall(GET_USER_BY_ID_SP);
             callableStatement.setInt(1, id);
             ResultSet rs = callableStatement.executeQuery();
             while (rs.next()) {
@@ -171,25 +169,24 @@ public class UserRepositoryImpl implements IUserRepository {
                 String country = rs.getString("country");
                 user = new User(id, name, email, country);
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return user;
     }
 
     @Override
     public void insertUserStore(User user) {
-        String query = "{CALL insert_user(?,?,?)}";
         try {
             Connection connection = new BaseRepository().getConnection();
-            CallableStatement callableStatement = connection.prepareCall(query);
+            CallableStatement callableStatement = connection.prepareCall(INSERT_USER_SP);
             callableStatement.setString(1, user.getName());
             callableStatement.setString(2, user.getEmail());
             callableStatement.setString(3, user.getCountry());
             System.out.println(callableStatement);
             callableStatement.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -212,8 +209,7 @@ public class UserRepositoryImpl implements IUserRepository {
             if (rs.next())
                 userId = rs.getInt(1);
             if (rowAffected == 1) {
-                String sqlPivot = "INSERT INTO user_permision(user_id,permision_id)  VALUES(?,?)";
-                pstmtAssignment = conn.prepareStatement(sqlPivot);
+                pstmtAssignment = conn.prepareStatement(SQL_PIVOT_USER);
                 for (int permisionId : permision) {
                     pstmtAssignment.setInt(1, userId);
                     pstmtAssignment.setInt(2, permisionId);
@@ -271,8 +267,8 @@ public class UserRepositoryImpl implements IUserRepository {
                 psUpdate.setString(2, "Quynh");
                 psUpdate.execute();
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -293,7 +289,6 @@ public class UserRepositoryImpl implements IUserRepository {
                 psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
                 psInsert.execute();
 
-
                 psInsert.setString(1, "Ngan");
                 psInsert.setBigDecimal(2, new BigDecimal(20));
                 psInsert.setTimestamp(3, Timestamp.valueOf(LocalDateTime.now()));
@@ -305,18 +300,17 @@ public class UserRepositoryImpl implements IUserRepository {
                 conn.commit();
                 conn.setAutoCommit(true);
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
     @Override
     public List<User> displayListUser() {
         List<User> users = new ArrayList<>();
-        String query = "{CALL display_list_user()}";
         try {
             Connection connection = new BaseRepository().getConnection();
-            CallableStatement cs = connection.prepareCall(query);
+            CallableStatement cs = connection.prepareCall(SELECT_ALL_USER_SP);
             ResultSet rs = cs.executeQuery();
             while (rs.next()) {
                 int id = rs.getInt("id");
@@ -325,38 +319,36 @@ public class UserRepositoryImpl implements IUserRepository {
                 String country = rs.getString("country");
                 users.add(new User(id, name, email, country));
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return users;
     }
 
     @Override
     public void editUser(User user) {
-        String query = "{CALL edit_user(?, ?, ?, ?)}";
         try {
             Connection connection = new BaseRepository().getConnection();
-            CallableStatement cs = connection.prepareCall(query);
+            CallableStatement cs = connection.prepareCall(EDIT_USER_SP);
             cs.setInt(1, user.getId());
             cs.setString(2, user.getName());
             cs.setString(3, user.getEmail());
             cs.setString(4, user.getCountry());
             cs.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
     @Override
     public void deleteUser(int id) {
-        String query = "{CALL delete_user(?)}";
         try {
             Connection connection = new BaseRepository().getConnection();
-            CallableStatement cs = connection.prepareCall(query);
+            CallableStatement cs = connection.prepareCall(DELETE_USER_SP);
             cs.setInt(1, id);
             cs.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -1,7 +1,7 @@
 package controller;
 
 import model.Product;
-import service.IProductService;
+import service.ProductService;
 import service.ProductServiceImpl;
 
 import javax.servlet.RequestDispatcher;
@@ -11,14 +11,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "ProductServlet", value = "/products")
 public class ProductServlet extends HttpServlet {
 
-    static IProductService productService = new ProductServiceImpl();
-    static List<Product> products = new ArrayList<>();
+    static ProductService productService = new ProductServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -80,13 +78,13 @@ public class ProductServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.findById(id);
+        Product products = productService.findById(id);
 
         RequestDispatcher dispatcher;
-        if (product == null) {
+        if (products == null) {
             dispatcher = request.getRequestDispatcher("error_404.jsp");
         } else {
-            request.setAttribute("product", product);
+            request.setAttribute("products", products);
             dispatcher = request.getRequestDispatcher("product/edit.jsp");
         }
 
@@ -99,13 +97,13 @@ public class ProductServlet extends HttpServlet {
 
     private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.findById(id);
+        Product products = productService.findById(id);
 
         RequestDispatcher dispatcher;
-        if (product == null) {
+        if (products == null) {
             dispatcher = request.getRequestDispatcher("error_404.jsp");
         } else {
-            request.setAttribute("product", product);
+            request.setAttribute("products", products);
             dispatcher = request.getRequestDispatcher("product/delete.jsp");
         }
 
@@ -118,13 +116,13 @@ public class ProductServlet extends HttpServlet {
 
     private void viewProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = productService.findById(id);
+        Product products = productService.findById(id);
 
         RequestDispatcher dispatcher;
-        if (product == null) {
+        if (products == null) {
             dispatcher = request.getRequestDispatcher("error_404.jsp");
         } else {
-            request.setAttribute("product", product);
+            request.setAttribute("products", products);
             dispatcher = request.getRequestDispatcher("product/view.jsp");
         }
 
@@ -200,7 +198,7 @@ public class ProductServlet extends HttpServlet {
             product.setPrice(price);
             product.setDescription(description);
             product.setProducer(producer);
-            productService.edit(id, product);
+            productService.edit(product);
 
             request.setAttribute("product", product);
             request.setAttribute("message", "Product Information was Updated");
