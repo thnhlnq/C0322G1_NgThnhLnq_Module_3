@@ -33,8 +33,8 @@ public class ProductRepositoryImpl implements ProductRepository {
                 String producer = rs.getString("producer");
                 products.add(new Product(id, name, price, description, producer));
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return products;
     }
@@ -49,8 +49,8 @@ public class ProductRepositoryImpl implements ProductRepository {
             ps.setString(3, product.getDescription());
             ps.setString(4, product.getProducer());
             ps.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -70,8 +70,8 @@ public class ProductRepositoryImpl implements ProductRepository {
                 String producer = rs.getString("producer");
                 products.add(new Product(id, name, price, description, producer));
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return product;
     }
@@ -92,8 +92,8 @@ public class ProductRepositoryImpl implements ProductRepository {
                 String producer = rs.getString("producer");
                 products.add(new Product(id, name, price, description, producer));
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return products;
     }
@@ -109,8 +109,8 @@ public class ProductRepositoryImpl implements ProductRepository {
             ps.setString(4, product.getProducer());
             ps.setInt(5, product.getId());
             ps.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -121,8 +121,8 @@ public class ProductRepositoryImpl implements ProductRepository {
             PreparedStatement ps = connection.prepareStatement(DELETE_PRODUCT);
             ps.setInt(1, id);
             ps.executeUpdate();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -49,6 +49,7 @@ public class ProductServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
+
         if (action == null) {
             action = "";
         }
@@ -63,12 +64,14 @@ public class ProductServlet extends HttpServlet {
                 deleteProduct(request, response);
                 break;
             default:
+                listProducts(request, response);
                 break;
         }
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/create.jsp");
+
         try {
             dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
@@ -78,6 +81,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
+
         Product products = productService.findById(id);
 
         RequestDispatcher dispatcher;
@@ -97,6 +101,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
+
         Product products = productService.findById(id);
 
         RequestDispatcher dispatcher;
@@ -116,6 +121,7 @@ public class ProductServlet extends HttpServlet {
 
     private void viewProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
+
         Product products = productService.findById(id);
 
         RequestDispatcher dispatcher;
@@ -135,6 +141,7 @@ public class ProductServlet extends HttpServlet {
 
     private void findByName(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nameFind = request.getParameter("nameFind");
+
         List<Product> products = productService.findByName(nameFind);
 
         request.setAttribute("products", products);
@@ -143,9 +150,11 @@ public class ProductServlet extends HttpServlet {
 
     private void listProducts(HttpServletRequest request, HttpServletResponse response) {
         List<Product> products = productService.findAll();
+
         request.setAttribute("products", products);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("product/list.jsp");
+
         try {
             dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
@@ -155,18 +164,27 @@ public class ProductServlet extends HttpServlet {
 
     private void createProduct(HttpServletRequest request, HttpServletResponse response) {
         String name = request.getParameter("name");
+
         double price = Double.parseDouble(request.getParameter("price"));
+
         String description = request.getParameter("description");
+
         String producer = request.getParameter("producer");
 
+        int id;
         int max = 0;
         List<Product> products = productService.findAll();
-        for (Product item : products) {
-            if (max < item.getId()) {
-                max = item.getId();
+
+        if (products.isEmpty()) {
+            id = 1;
+        } else {
+            for (Product item : products) {
+                if (max < item.getId()) {
+                    max = item.getId();
+                }
             }
+            id = max + 1;
         }
-        int id = max + 1;
 
         Product product = new Product(id, name, price, description, producer);
         productService.create(product);
@@ -183,14 +201,18 @@ public class ProductServlet extends HttpServlet {
 
     private void editProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
+
         String name = request.getParameter("name");
+
         double price = Double.parseDouble(request.getParameter("price"));
+
         String description = request.getParameter("description");
+
         String producer = request.getParameter("producer");
 
         Product product = productService.findById(id);
-        RequestDispatcher dispatcher;
 
+        RequestDispatcher dispatcher;
         if (product == null) {
             dispatcher = request.getRequestDispatcher("error_404.jsp");
         } else {
@@ -198,6 +220,7 @@ public class ProductServlet extends HttpServlet {
             product.setPrice(price);
             product.setDescription(description);
             product.setProducer(producer);
+
             productService.edit(product);
 
             request.setAttribute("product", product);
@@ -214,6 +237,7 @@ public class ProductServlet extends HttpServlet {
 
     private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
+
         Product product = productService.findById(id);
 
         RequestDispatcher dispatcher;
