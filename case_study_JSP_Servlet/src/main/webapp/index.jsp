@@ -78,7 +78,7 @@
         </div>
         <div class="col-lg-3 text-end p-5 fw-bold text-success">Nguyễn Thành Lonq
             <div class="avatar bg-success ms-2">
-                <div class="avatar_letters text-light">L</div>
+                <div class="avatar_letters text-light"><img src="1905504.ico" width="20px" height="20px"></div>
             </div>
         </div>
     </div>
@@ -96,46 +96,20 @@
                 <a class="navbar-brand" href="#"> </a>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">
-                                Home</a>
-                        </li>
+                        <a class="nav-link text-white" href="/home">Home</a>
+                        <a class="nav-link text-light" href="/employees">Employee</a>
+                        <a class="nav-link text-light" href="/customers">Customer</a>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Employee
-                            </a>
+                            <a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">Service</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="employees?action=list">List Employee</a></li>
-                                <li><a class="dropdown-item" href="employees?action=create">Add New Employee</a></li>
+                                <li><a class="dropdown-item" href="#">Villa</a></li>
+                                <li><a class="dropdown-item" href="#">House</a></li>
+                                <li><a class="dropdown-item" href="#">Room</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Customer
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="customers?action=list">List Customer</a></li>
-                                <li><a class="dropdown-item" href="customers?action=create">Add New Customer</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Service
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="service?action=list">List Service</a></li>
-                                <li><a class="dropdown-item" href="service?action=create">Add New Service</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">
-                                Contract</a>
-                        </li>
+                        <a class="nav-link text-white" href="#">Contract</a>
                     </ul>
-                    <form class="d-flex" role="search">
+                    <form class="d-flex" role="search" style="margin-bottom: auto; height: 38px;">
                         <label><input class="form-control me-2" type="search" placeholder="Search"></label>
                         <button class="btn bg-light text-success ms-1" type="submit">Search</button>
                     </form>
@@ -147,7 +121,7 @@
 
 <div class="container-fluid">
     <div class="col-lg-12 gradient-header">
-        <div class="col-lg-12 border border-2 text-center gradient-custom" style="width: 100%; height: 500px">Body</div>
+        <div class="col-lg-12 border border-2 text-center gradient-custom" style="width: 100%; height: 500px">Home</div>
     </div>
 </div>
 

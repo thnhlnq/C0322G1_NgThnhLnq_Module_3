@@ -12,8 +12,10 @@
     <meta charset="UTF-8">
     <title>Nguyễn Thành Lonq</title>
     <link rel="shortcut icon" href="1905504.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap413/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap4.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <style>
         [class*="col-"] {
             float: left;
@@ -100,47 +102,28 @@
                 <a class="navbar-brand" href="#"> </a>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">
-                                Home</a>
-                        </li>
+                        <a class="nav-link text-white" href="/home">Home</a>
+                        <a class="nav-link text-light" href="/employees">Employee</a>
+                        <a class="nav-link text-light" href="/customers">Customer</a>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Employee
-                            </a>
+                            <a class="nav-link text-light" href="#">Service</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="employees?action=list">List Employee</a></li>
-                                <li><a class="dropdown-item" href="employees?action=create">Add New Employee</a></li>
+                                <li><a class="dropdown-item" href="#">Villa</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">House</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Room</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Customer
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="customers?action=list">List Customer</a></li>
-                                <li><a class="dropdown-item" href="customers?action=create">Add New Customer</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Service
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="service?action=list">List Service</a></li>
-                                <li><a class="dropdown-item" href="service?action=create">Add New Service</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">
-                                Contract</a>
-                        </li>
+                        <a class="nav-link text-white" href="#">Contract</a>
                     </ul>
-                    <form class="d-flex">
-                        <label><input class="form-control me-2" type="search" placeholder="Search" name="nameFind"></label>
+                    <form class="d-flex" style="margin-bottom: auto; height: 38px;">
+                        <label><input class="form-control me-2" type="search" placeholder="Search"
+                                      name="nameFind"></label>
                         <input class="btn bg-light text-success ms-1" type="submit" name="action" value="Search">
                     </form>
                 </div>
@@ -153,8 +136,12 @@
     <div class="col-lg-12 gradient-header">
         <div class="text-center gradient-custom" style="width: 100%; height: auto">
             <div align="center">
-                <caption><h2>List of Customer</h2></caption>
-                <table class="container-fluid table table-hover">
+                <caption><h2>List of Customer</h2>
+                    <a class="btn btn-outline-secondary"
+                       href="/customers?action=create">Create New Customer</a>
+                </caption>
+                <table id="tableStudent" class="container-fluid table table-hover">
+                    <thead>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
@@ -165,9 +152,10 @@
                         <th>Email</th>
                         <th>Address</th>
                         <th>Customer Type</th>
-                        <th></th>
-                        <th></th>
+                        <th>Action</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     <c:forEach items="${customers}" var="customer">
                         <tr>
                             <td>${customer.getId()}</td>
@@ -188,17 +176,16 @@
                                 </c:forEach>
                             </td>
                             <td>
-                                <a class="btn btn-outline-secondary"
+                                <a class="btn btn-outline-secondary" style="width: 71px"
                                    href="/customers?action=edit&id=${customer.getId()}">Edit</a>
-                                    <%--                                <a class="link-danger text-decoration-none"--%>
-                                    <%--                                   href="/customers?action=delete&id=${customer.getId()}">Delete</a>--%>
                                 <button class="btn btn-outline-secondary" type="button"
-                                        onclick="infoDelete('${customer.id}','${customer.name}')"
+                                        onclick="infoDelete('${customer.getId()}','${customer.getName()}')"
                                         data-bs-toggle="modal" data-bs-target="#exampleModal">Delete
                                 </button>
                             </td>
                         </tr>
                     </c:forEach>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -240,9 +227,24 @@
     }
 </script>
 
+<script src="jquery/jquery-3.5.1.min.js"></script>
+<script src="datatables/js/jquery.dataTables.min.js"></script>
+<script src="datatables/js/dataTables.bootstrap4.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#tableStudent').dataTable( {
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 5
+        } );
+    } );
+</script>
 </body>
 </html>
 

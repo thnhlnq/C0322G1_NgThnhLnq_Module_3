@@ -96,52 +96,22 @@
                 <a class="navbar-brand" href="#"> </a>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">
-                                Home</a>
-                        </li>
+                        <a class="nav-link text-white" href="/home">Home</a>
+                        <a class="nav-link text-light" href="/employees">Employee</a>
+                        <a class="nav-link text-light" href="/customers">Customer</a>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Employee
-                            </a>
+                            <a class="nav-link text-light" href="/services">Service</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="employees?action=list">List Employee</a></li>
-                                <li><a class="dropdown-item" href="employees?action=create">Add New Employee</a></li>
-                                <li><a class="dropdown-item" href="employees?action=edit">Edit Employee</a></li>
-                                <li><a class="dropdown-item" href="employees?action=delete">Delete Employee</a></li>
+                                <li><a class="dropdown-item" href="#">Villa</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">House</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Room</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Customer
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="customers?action=list">List Customer</a></li>
-                                <li><a class="dropdown-item" href="customers?action=create">Add New Customer</a></li>
-                                <li><a class="dropdown-item" href="customers?action=edit">Edit Customer</a></li>
-                                <li><a class="dropdown-item" href="customers?action=delete">Delete Customer</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Service
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="service?action=list">List Service</a></li>
-                                <li><a class="dropdown-item" href="service?action=create">Add New Service</a></li>
-                                <li><a class="dropdown-item" href="service?action=edit">Edit Service</a></li>
-                                <li><a class="dropdown-item" href="service?action=delete">Delete Service</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">
-                                Contract</a>
-                        </li>
+                        <a class="nav-link text-white" href="#">Contract</a>
                     </ul>
-                    <form class="d-flex" role="search">
+                    <form class="d-flex" role="search" style="margin-bottom: auto; height: 38px;">
                         <label><input class="form-control me-2" type="search" placeholder="Search"></label>
                         <button class="btn bg-light text-success ms-1" type="submit">Search</button>
                     </form>
@@ -153,71 +123,152 @@
 
 <div class="container-fluid">
     <div class="col-lg-12 gradient-header">
-        <div class="col-lg-4 border border-2 gradient-header" style="width: 25%; height: 475px">
-            <p>Item One</p>
-            <p>Item Two</p>
-            <p>Item Three</p>
-        </div>
-        <div class="col-lg-8 border border-2 text-center gradient-custom" style="width: 75%; height: 475px">
-            <div>
-                <form method="post" class="w-100">
-                    <caption>
-                        <h2><a href="employees?action=create"></a>Add New Employee</h2>
-                    </caption>
-                    <table border="1" cellpadding="5">
+        <div class="gradient-custom" style="text-align: center; width: 100%; height: auto">
+            <form method="post" class="d-flex justify-content-center">
+                <fieldset>
+                    <legend>
+                        <h2>Create Employee</h2>
+                    </legend>
+                    <table>
                         <tr>
-                            <th>Employee Name:</th>
                             <td>
-                                <input type="text" name="name" size="45"/>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Name</span>
+                                    <input style="width: 100%" type="text" class="form-control" name="name"
+                                           placeholder="Enter Name Employee">
+                                </div>
                             </td>
                         </tr>
+
                         <tr>
-                            <th>Employee Date Of Birth:</th>
                             <td>
-                                <input type="text" name="dateOfBirth" size="45"/>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Date Of Birth</span>
+                                    <input type="date" class="form-control" name="dateOfBirth"
+                                           placeholder="Enter Date Of Birth Employee">
+                                </div>
                             </td>
                         </tr>
+
                         <tr>
-                            <th>Employee Id Card:</th>
                             <td>
-                                <input type="text" name="idCard" size="15"/>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Id Card</span>
+                                    <input type="text" class="form-control" name="idCard"
+                                           placeholder="Enter Id Card Employee">
+                                </div>
                             </td>
                         </tr>
+
                         <tr>
-                            <th>Employee Salary:</th>
                             <td>
-                                <input type="text" name="salary" size="15"/>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Salary</span>
+                                    <input type="text" class="form-control" name="salary"
+                                           placeholder="Enter Salary Employee">
+                                </div>
                             </td>
                         </tr>
+
                         <tr>
-                            <th>Employee Phone:</th>
                             <td>
-                                <input type="text" name="phone" size="15"/>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Phone</span>
+                                    <input type="text" class="form-control" name="phone"
+                                           placeholder="Enter Phone Employee">
+                                </div>
                             </td>
                         </tr>
+
                         <tr>
-                            <th>Employee Email:</th>
                             <td>
-                                <input type="text" name="email" size="15"/>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Email</span>
+                                    <input type="text" class="form-control" name="email"
+                                           placeholder="Enter Email Employee">
+                                </div>
                             </td>
                         </tr>
+
                         <tr>
-                            <th>Employee Address:</th>
                             <td>
-                                <input type="text" name="address" size="15"/>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Address</span>
+                                    <input type="text" class="form-control" name="address"
+                                           placeholder="Enter Address Employee">
+                                </div>
                             </td>
                         </tr>
+
                         <tr>
-                            <td colspan="2" align="center">
-                                <input type="text" value="Back"/>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Position</span>
+                                    <select class="form-select" name="positionId">
+                                        <option value="">Select Employee Position</option>
+                                        <c:forEach items="${positions}" var="position">
+                                            <option value="${position.id}">${position.name}</option>
+                                        </c:forEach>
+                                    </select>
+                                </div>
                             </td>
-                            <td colspan="2" align="center">
-                                <input type="submit" value="Save"/>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Education Degree</span>
+                                    <select class="form-select" name="educationDegreeId">
+                                        <option value="">Select Employee Education Degree</option>
+                                        <c:forEach items="${educationDegrees}" var="educationDegree">
+                                            <option value="${educationDegree.id}">${educationDegree.name}</option>
+                                        </c:forEach>
+                                    </select>
+                                </div>
                             </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text">Employee Division</span>
+                                    <select class="form-select" name="divisionId">
+                                        <option value="">Select Employee Division</option>
+                                        <c:forEach items="${divisions}" var="division">
+                                        <option value="${division.id}">${division.name}</option>
+                                        </c:forEach>
+                                </div>
+                            </td>
+                        </tr>
+
+<%--                        <tr>--%>
+<%--                            <td>--%>
+<%--                                <div class="input-group flex-nowrap">--%>
+<%--                                    <span class="input-group-text">Employee Username</span>--%>
+<%--                                    <select class="form-select" name="username">--%>
+<%--                                        <option value="1" selected>Select Employee Username</option>--%>
+<%--                                        <c:forEach items="${users}" var="user">--%>
+<%--                                            <option value="${user.username}">${user.username}</option>--%>
+<%--                                        </c:forEach>--%>
+<%--                                    </select>--%>
+<%--                                </div>--%>
+<%--                            </td>--%>
+<%--                        </tr>--%>
+
+                        <tr>
+                            <div class="col-12">
+                                <td>
+                                    <div class="vstack gap-2 col-12 mx-6">
+                                        <input type="submit" class="btn btn-secondary" value="Create">
+                                        <a class="text-decoration-none text-secondary" href="/employees?action=list"><button type="button" class="btn btn-outline-secondary col-12">Cancel
+                                        </button></a>
+                                    </div>
+                                </td>
+                            </div>
                         </tr>
                     </table>
-                </form>
-            </div>
+                </fieldset>
+            </form>
         </div>
     </div>
 </div>

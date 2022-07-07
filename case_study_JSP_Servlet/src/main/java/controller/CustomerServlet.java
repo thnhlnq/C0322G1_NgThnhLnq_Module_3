@@ -1,11 +1,11 @@
 package controller;
 
-import model.person.Customer;
-import model.person.CustomerType;
-import service.CustomerService;
-import service.CustomerTypeService;
-import service.impl.CustomerServiceImpl;
-import service.impl.CustomerTypeServiceImpl;
+import model.customer.Customer;
+import model.customer.CustomerType;
+import service.customer.CustomerService;
+import service.customer.CustomerTypeService;
+import service.customer.impl.CustomerServiceImpl;
+import service.customer.impl.CustomerTypeServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,11 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "CustomerServlet", value = "/customers")
+@WebServlet(name = "CustomerServlet", urlPatterns = "/customers")
 
 public class CustomerServlet extends HttpServlet {
 
     static CustomerService customerService = new CustomerServiceImpl();
+
     static CustomerTypeService customerTypeService = new CustomerTypeServiceImpl();
 
     @Override
@@ -32,6 +33,7 @@ public class CustomerServlet extends HttpServlet {
         }
 
         switch (action) {
+
             case "create":
                 showCreateForm(request, response);
                 break;
@@ -81,17 +83,18 @@ public class CustomerServlet extends HttpServlet {
     private void listCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         List<Customer> customers = customerService.listCustomers();
-
         request.setAttribute("customers", customers);
 
         List<CustomerType> customerTypes = customerTypeService.listCustomerTypes();
-
         request.setAttribute("customerTypes", customerTypes);
 
         request.getRequestDispatcher("view/customer/list.jsp").forward(request, response);
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        List<CustomerType> customerTypes = customerTypeService.listCustomerTypes();
+        request.setAttribute("customerTypes", customerTypes);
 
         request.getRequestDispatcher("view/customer/create.jsp").forward(request, response);
     }
@@ -138,10 +141,18 @@ public class CustomerServlet extends HttpServlet {
 
         Customer customer = customerService.findById(id);
 
+        List<CustomerType> customerTypes= customerTypeService.listCustomerTypes();
+
         if (customer == null) {
+
             request.getRequestDispatcher("error_404.jsp");
+
         } else {
+
             request.setAttribute("customer", customer);
+
+            request.setAttribute("customerTypes", customerTypes);
+
             request.getRequestDispatcher("view/customer/edit.jsp").forward(request, response);
         }
     }
@@ -174,10 +185,13 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void showFindForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         String nameFind = request.getParameter("nameFind");
+
         List<Customer> customers = customerService.findCustomers(nameFind);
 
         request.setAttribute("customers", customers);
+
         request.getRequestDispatcher("view/customer/list.jsp").forward(request, response);
     }
 

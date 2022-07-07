@@ -109,7 +109,7 @@ attach_facility_unit varchar(10),
 attach_facility_status varchar(45)
 );
 
-create table contract (
+create table contract ( 
 contract_id int primary key auto_increment,
 contract_start_date datetime,
 contract_end_date datetime,

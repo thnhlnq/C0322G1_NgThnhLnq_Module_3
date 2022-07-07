@@ -94,46 +94,22 @@
                 <a class="navbar-brand" href="#"> </a>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">
-                                Home</a>
-                        </li>
+                        <a class="nav-link text-white" href="/home">Home</a>
+                        <a class="nav-link text-light" href="/employees">Employee</a>
+                        <a class="nav-link text-light" href="/customers">Customer</a>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Employee
-                            </a>
+                            <a class="nav-link text-light" href="/services">Service</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="employees?action=list">List Employee</a></li>
-                                <li><a class="dropdown-item" href="employees?action=create">Add New Employee</a></li>
+                                <li><a class="dropdown-item" href="#">Villa</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">House</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Room</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Customer
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="customers?action=list">List Customer</a></li>
-                                <li><a class="dropdown-item" href="customers?action=create">Add New Customer</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Service
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="service?action=list">List Service</a></li>
-                                <li><a class="dropdown-item" href="service?action=create">Add New Service</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">
-                                Contract</a>
-                        </li>
+                        <a class="nav-link text-white" href="#">Contract</a>
                     </ul>
-                    <form class="d-flex" role="search">
+                    <form class="d-flex" role="search" style="margin-bottom: auto; height: 38px;">
                         <label><input class="form-control me-2" type="search" placeholder="Search"></label>
                         <button class="btn bg-light text-success ms-1" type="submit">Search</button>
                     </form>
@@ -222,11 +198,10 @@
                                 <div class="input-group flex-nowrap">
                                     <span class="input-group-text">Customer Type</span>
                                     <select class="form-select" name="customerTypeId">
-                                        <option value="1">Diamond</option>
-                                        <option value="2">Platinum</option>
-                                        <option value="3">Gold</option>
-                                        <option value="4">Silver</option>
-                                        <option value="5">Member</option>
+                                        <option value="">Select Customer Type</option>
+                                        <c:forEach items="${customerTypes}" var="customerType">
+                                            <option  value="${customerType.customerTypeId}">${customerType.customerTypeName}</option>
+                                        </c:forEach>
                                     </select>
                                 </div>
                             </td>
@@ -236,8 +211,10 @@
                                 <td>
                                     <div class="vstack gap-2 col-12 mx-6">
                                         <input type="submit" class="btn btn-secondary" value="Create">
-                                        <a class="text-decoration-none text-secondary" href="/customers?action=list"><button type="button" class="btn btn-outline-secondary col-12">Cancel
-                                        </button></a>
+                                        <a class="text-decoration-none text-secondary" href="/customers?action=list">
+                                            <button type="button" class="btn btn-outline-secondary col-12">Cancel
+                                            </button>
+                                        </a>
                                     </div>
                                 </td>
                             </div>
