@@ -106,16 +106,10 @@
                         <a class="nav-link text-light" href="/employees">Employee</a>
                         <a class="nav-link text-light" href="/customers">Customer</a>
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-light" href="#">Service</a>
+                            <a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">Service</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Villa</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item" href="#">House</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item" href="#">Room</a></li>
                             </ul>
                         </li>
