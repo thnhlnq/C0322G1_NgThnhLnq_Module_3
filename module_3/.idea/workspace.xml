@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46e9b714-54d4-4f73-8516-92d66bdfad7b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/1905504.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/CustomerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/EmployeeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/HomeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/AttachFacility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/Contract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/ContractDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/Facility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/FacilityType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/RentType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/employee/Division.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/employee/EducationDegree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/employee/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/employee/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/user/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/user/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/user/UserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/DivisionRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/EducationDegreeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/EmployeeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/PositionRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/UsernameRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/impl/DivisionRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/impl/EducationDegreeRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/impl/EmployeeRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/impl/PositionRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/impl/UsernameRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/customer/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/customer/CustomerTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/customer/impl/CustomerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/customer/impl/CustomerTypeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/DivisionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/EducationDegreeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/EmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/PositionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/UsernameService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/impl/DivisionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/impl/EducationDegreeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/impl/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/impl/PositionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/impl/UsernameServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/error_404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/test-paging-sorting.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/employee/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/employee/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/employee/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/build/libs/case_study_JSP_Servlet-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/build/libs/case_study_JSP_Servlet-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="2BbYP8p0CGU5QKCyUk2bZ9D5PR4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../case_study_JSP_Servlet" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0322G1_NgThnhLnq\Module_3_CSDL_CSS\module_3\src\main\webapp" />
+      <recent name="D:\C0322G1_NgThnhLnq\Module_3_CSDL_CSS\module_3\src" />
+      <recent name="D:\C0322G1_NgThnhLnq\Module_3_CSDL_CSS\module_3\src\main\java\service" />
+      <recent name="D:\C0322G1_NgThnhLnq\Module_3_CSDL_CSS\module_3\src\main\java\repository" />
+      <recent name="D:\C0322G1_NgThnhLnq\Module_3_CSDL_CSS\module_3\src\main\java\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0322G1_NgThnhLnq\Module_3_CSDL_CSS\module_3\src\main\java\model" />
+      <recent name="D:\C0322G1_NgThnhLnq\Module_3_CSDL_CSS\module_3\src\main\java\controller" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.64" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.64" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : org.example : module_3-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="3117aee2-abba-4e3c-b7d6-f59b96be346a" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58688" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : module_3-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46e9b714-54d4-4f73-8516-92d66bdfad7b" name="Changes" comment="" />
+      <created>1657176225446</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657176225446</updated>
+      <workItem from="1657176227626" duration="1621000" />
+      <workItem from="1657178077010" duration="1842000" />
+      <workItem from="1657185590503" duration="3199000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

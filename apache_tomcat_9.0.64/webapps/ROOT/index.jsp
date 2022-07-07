@@ -12,8 +12,7 @@
     <meta charset="UTF-8">
     <title>Nguyễn Thành Lonq</title>
     <link rel="shortcut icon" href="1905504.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <style>
         [class*="col-"] {
             float: left;
@@ -69,16 +68,15 @@
             <span>&nbsp; 7.0 km từ Sân bay Quốc tế Đà Nẵng</span>
         </div>
         <div class="col-lg-3 text-success py-4">
-            <img src="https://cdn-icons.flaticon.com/png/512/3059/premium/3059457.png?token=exp=1656165905~hmac=d204db81b7f6417d76769bb2fe01de8d"
-                 alt="phone" width="20" height="20">
+            <img src="https://cdn-icons.flaticon.com/png/512/3059/premium/3059457.png?token=exp=1656165905~hmac=d204db81b7f6417d76769bb2fe01de8d" alt="phone" width="20" height="20">
             <span>&nbsp; 84-236-3847 333/888 <br></span>
-            <img src="https://cdn-icons.flaticon.com/png/512/3059/premium/3059421.png?token=exp=1656165843~hmac=de685b43ba77b868275bdcb80a5445e0"
-                 alt="email" width="20" height="20">
+            <img src="https://cdn-icons.flaticon.com/png/512/3059/premium/3059421.png?token=exp=1656165843~hmac=de685b43ba77b868275bdcb80a5445e0" alt="email" width="20" height="20">
             <span>&nbsp; reservation@furamavietnam.com</span>
         </div>
         <div class="col-lg-3 text-end p-5 fw-bold text-success">Nguyễn Thành Lonq
             <div class="avatar bg-success ms-2">
-                <div class="avatar_letters text-light"><img src="1905504.ico" width="20px" height="20px"></div>
+                <div class="avatar_letters text-light"><img src="1905504.ico" width="20px" height="20px" alt="ico">
+                </div>
             </div>
         </div>
     </div>
@@ -88,9 +86,7 @@
     <div class="col-lg-12 bg-success gradient-body">
         <nav class="navbar navbar-expand-lg bg-success p-2 text-light gradient-body">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo03"
-                        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" href="#"> </a>
@@ -129,9 +125,7 @@
     <div class="col-lg-12 border border-1 text-center fw-bold gradient-footer">Footer</div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
 

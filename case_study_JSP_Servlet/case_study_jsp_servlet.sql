@@ -209,9 +209,7 @@ VALUES ('Villa'),
        ('House'),
        ('Room');
 
-INSERT INTO facility (facility_name, facility_area, facility_cost, facility_max_people, standard_room,
-                      description_other_convenience, pool_area, number_of_floors, facility_free, rent_type_id,
-                      facility_type_id)
+INSERT INTO facility (facility_name, facility_area, facility_cost, facility_max_people, standard_room, description_other_convenience, pool_area, number_of_floors, facility_free, rent_type_id, facility_type_id)
 VALUES ('Villa Beach Front', 25000, 10000000, 10, 'vip', 'Có hồ bơi', 500, 4, 'facility_free', 3, 1),
        ('House Princess 01', 14000, 5000000, 7, 'vip', 'Có thêm bếp nướng', NULL, 3, 'facility_free', 2, 2),
        ('Room Twin 01', 5000, 1000000, 2, 'normal', 'Có tivi', NULL, NULL, 'facility_free', 4, 3),

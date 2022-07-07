@@ -140,21 +140,12 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
 
         Customer customer = customerService.findById(id);
+        request.setAttribute("customer", customer);
 
-        List<CustomerType> customerTypes= customerTypeService.listCustomerTypes();
+        List<CustomerType> customerTypes = customerTypeService.listCustomerTypes();
+        request.setAttribute("customerTypes", customerTypes);
 
-        if (customer == null) {
-
-            request.getRequestDispatcher("error_404.jsp");
-
-        } else {
-
-            request.setAttribute("customer", customer);
-
-            request.setAttribute("customerTypes", customerTypes);
-
-            request.getRequestDispatcher("view/customer/edit.jsp").forward(request, response);
-        }
+        request.getRequestDispatcher("view/customer/edit.jsp").forward(request, response);
     }
 
     private void editCustomer(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
