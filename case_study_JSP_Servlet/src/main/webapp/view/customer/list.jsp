@@ -109,13 +109,9 @@
                             <a class="nav-link text-light" href="#">Service</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Villa</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
+                                <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">House</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
+                                <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Room</a></li>
                             </ul>
                         </li>

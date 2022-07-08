@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "CustomerServlet", urlPatterns = "/customers")
 
@@ -130,7 +131,18 @@ public class CustomerServlet extends HttpServlet {
 
         Customer customer = new Customer(id, name, dateOfBirth, gender, idCard, phone, email, address, customerTypeId);
 
-        customerService.createCustomer(customer);
+        Map<String, String> map = customerService.createCustomer(customer);
+
+        if (map.isEmpty()) {
+            request.setAttribute("message", "Create Customer Success.");
+        } else {
+            request.setAttribute("message", "Create Customer Unsuccess.");
+            request.setAttribute("error", map);
+        }
+
+        List<CustomerType> customerTypes = customerTypeService.listCustomerTypes();
+
+        request.setAttribute("customerTypes", customerTypes);
 
         request.getRequestDispatcher("view/customer/create.jsp").forward(request, response);
     }

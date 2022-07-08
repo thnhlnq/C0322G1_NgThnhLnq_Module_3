@@ -127,7 +127,10 @@
                     <legend>
                         <h2>Create Customer</h2>
                     </legend>
-                    <table>
+                    <table style="display: inline-grid">
+                        <c:if test="${message != null}">
+                            <p style="color: red">${message}</p>
+                        </c:if>
                         <tr>
                             <td>
                                 <div class="input-group flex-nowrap">
@@ -137,6 +140,7 @@
                                 </div>
                             </td>
                         </tr>
+                        <p style="color: red">${error.get("name")}</p>
                         <tr>
                             <td>
                                 <div class="input-group flex-nowrap">
@@ -165,6 +169,7 @@
                                            placeholder="Enter Id Card Customer">
                                 </div>
                             </td>
+                            <p style="color: red">${error.get("idCard")}</p>
                         </tr>
                         <tr>
                             <td>
@@ -174,6 +179,7 @@
                                            placeholder="Enter Phone Customer">
                                 </div>
                             </td>
+                            <p style="color: red">${error.get("phone")}</p>
                         </tr>
                         <tr>
                             <td>
@@ -183,6 +189,7 @@
                                            placeholder="Enter Email Customer">
                                 </div>
                             </td>
+                            <p style="color: red">${error.get("email")}</p>
                         </tr>
                         <tr>
                             <td>
