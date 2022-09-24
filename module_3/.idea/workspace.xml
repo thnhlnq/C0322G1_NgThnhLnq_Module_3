@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46e9b714-54d4-4f73-8516-92d66bdfad7b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/ThanhVienService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/1905504.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/CustomerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/common/Validate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/common/Validate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/CustomerServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/EmployeeServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/controller/HomeServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/AttachFacility.class" beforeDir="false" />
@@ -15,6 +17,8 @@
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/Facility.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/FacilityType.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/RentType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/customer/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/customer/CustomerType.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/employee/Division.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/employee/EducationDegree.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/employee/Employee.class" beforeDir="false" />
@@ -22,6 +26,11 @@
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/user/Role.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/user/User.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/model/user/UserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/BaseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/BaseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/customer/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/customer/CustomerTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/customer/impl/CustomerRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/customer/impl/CustomerTypeRepositoryImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/DivisionRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/EducationDegreeRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/repository/employee/EmployeeRepository.class" beforeDir="false" />
@@ -46,33 +55,50 @@
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/impl/EmployeeServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/impl/PositionServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/WEB-INF/classes/service/employee/impl/UsernameServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/error_404.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/test-paging-sorting.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/create.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/customer/list.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/employee/create.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/employee/edit.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apache_tomcat_9.0.64/webapps/ROOT/view/employee/list.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study_JSP_Servlet/build/libs/case_study_JSP_Servlet-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_JSP_Servlet/build/libs/case_study_JSP_Servlet-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/CustomerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/customer/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/model/customer/CustomerType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/repository/BaseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/repository/BaseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/repository/customer/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/repository/customer/CustomerTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/repository/customer/impl/CustomerRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/repository/customer/impl/CustomerTypeRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/service/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/service/CustomerTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/service/impl/CustomerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/service/impl/CustomerTypeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/module_3-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/module_3-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HoKhauServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/HoKhau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/customer/CustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ThanhVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/customer/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/customer/CustomerTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ThanhVienRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/customer/impl/CustomerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/HoKhauRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/customer/impl/CustomerTypeRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/impl/ThanhVienRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CustomerTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/HoKhauService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/HoKhauServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/CustomerTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/ThanhVienServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/hokhau/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/customer/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/hokhau/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/customer/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/hokhau/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,10 +110,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -111,10 +150,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../case_study_JSP_Servlet" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -221,6 +261,11 @@
       <workItem from="1657176227626" duration="1621000" />
       <workItem from="1657178077010" duration="1842000" />
       <workItem from="1657185590503" duration="3199000" />
+      <workItem from="1657505066784" duration="190000" />
+      <workItem from="1657505281738" duration="8282000" />
+      <workItem from="1657516940072" duration="154000" />
+      <workItem from="1657517112923" duration="16000" />
+      <workItem from="1657517529535" duration="78000" />
     </task>
     <servers />
   </component>
